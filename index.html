@@ -8,15 +8,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <head>
+  ...
   <style>
     :root{
-      --bg: #F8F4EC;
-      --text: #0D0D0D;
-      --accent: #C7A77D;
-      --muted:#6A6A6A;
+      --bg: #0C0B0B;          /* Fondo general oscuro */
+      --panel: #1A1818;       /* Panels y tarjetas */
+      --text: #FFFFFF;        /* Texto */
+      --muted: #D4D4D4;       /* Texto suave */
+      --accent: #C7A77D;      /* Dorado elegante */
       --max-width:1100px;
       --radius:12px;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -27,33 +31,113 @@
       line-height:1.6;
     }
     a{text-decoration:none;color:inherit}
+
     .container{max-width:var(--max-width);margin:0 auto;padding:32px}
 
-    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-    .brand{display:flex;align-items:center;gap:16px}
-    .brand h1{font-family:'Cormorant Garamond', serif;font-weight:700;margin:0;font-size:26px}
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 0;
+    }
+
+    .brand h1{
+      font-family:'Cormorant Garamond', serif;
+      font-weight:700;
+      margin:0;
+      font-size:26px;
+      color:var(--accent);
+    }
 
     .nav{display:flex;gap:18px}
-    .cta{background:var(--text);color:var(--bg);padding:10px 16px;border-radius:8px;font-weight:600}
+    .nav a{color:var(--muted);transition:0.2s}
+    .nav a:hover{color:var(--accent)}
+
+    .cta{
+      background:var(--accent);
+      color:#0C0B0B;
+      padding:10px 16px;
+      border-radius:8px;
+      font-weight:600;
+    }
 
     /* HERO */
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;padding:60px 0}
-    .hero-image{background:#111;padding:18px;border-radius:12px;display:flex;justify-content:center}
-    .bottle{max-width:300px;width:100%;height:auto;}
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:40px;
+      align-items:center;
+      padding:60px 0;
+    }
+
+    .hero-image{
+      background:var(--panel);
+      padding:18px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.06);
+      display:flex;
+      justify-content:center;
+    }
+
+    .bottle{
+      max-width:300px;width:100%;height:auto;
+    }
+
+    h2, h3, h4{
+      font-family:'Cormorant Garamond', serif;
+      color:var(--accent);
+    }
 
     /* Cards */
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .card{border:1px solid rgba(13,13,13,0.06);padding:18px;border-radius:12px;background:transparent}
-    .card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .card{
+      background:var(--panel);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:18px;
+      border-radius:12px;
+    }
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:8px;
+    }
 
-    /* Maridajes */
-    .maridaje{display:flex;gap:20px;align-items:center}
-    .maridaje img{width:300px;border-radius:12px}
+    /* Maridaje */
+    .maridaje{
+      display:flex;
+      gap:20px;
+      align-items:center;
+    }
+    .maridaje img{
+      width:300px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.08);
+    }
 
     /* About */
-    .about{display:flex;gap:30px;align-items:center}
-    .about img{width:260px;border-radius:12px}
+    .about{
+      display:flex;
+      gap:30px;
+      align-items:center;
+    }
+    .about img{
+      width:260px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .muted{
+      color:var(--muted);
+    }
+
   </style>
+</head>
+
 
 </head>
 <body>
