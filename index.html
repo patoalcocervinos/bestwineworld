@@ -1,69 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Wine World</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Best Wine World — Vinos Premium</title>
+  <meta name="description" content="Best Wine World: selección de vinos premium, maridajes y experiencias para paladares exigentes.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <style>
+    :root{
+      --bg: #F8F4EC;
+      --text: #0D0D0D;
+      --accent: #C7A77D;
+      --muted:#6A6A6A;
+      --max-width:1100px;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Montserrat', system-ui;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{max-width:var(--max-width);margin:0 auto;padding:32px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:16px}
+    .brand h1{font-family:'Cormorant Garamond', serif;font-weight:700;margin:0;font-size:26px}
+
+    .nav{display:flex;gap:18px}
+    .cta{background:var(--text);color:var(--bg);padding:10px 16px;border-radius:8px;font-weight:600}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;padding:60px 0}
+    .hero-image{background:#111;padding:18px;border-radius:12px;display:flex;justify-content:center}
+    .bottle{max-width:300px;width:100%;height:auto;}
+
+    /* Cards */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{border:1px solid rgba(13,13,13,0.06);padding:18px;border-radius:12px;background:transparent}
+    .card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+
+    /* Maridajes */
+    .maridaje{display:flex;gap:20px;align-items:center}
+    .maridaje img{width:300px;border-radius:12px}
+
+    /* About */
+    .about{display:flex;gap:30px;align-items:center}
+    .about img{width:260px;border-radius:12px}
+  </style>
+
+</head>
 <body>
 
-    <!-- HERO -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Best Wine World</h1>
-            <p>Los mejores vinos seleccionados especialmente para ti.</p>
-            <a href="#catalogo" class="btn">Ver Catálogo</a>
-        </div>
+  <div class="container">
+
+    <header>
+      <div class="brand">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='52' height='52'><rect width='52' height='52' fill='%23C7A77D' rx='8'/><text x='26' y='33' font-size='20' font-family='Cormorant Garamond' text-anchor='middle' fill='%230d0d0d'>B</text></svg>" style="height:52px;border-radius:8px">
+        <h1>Best Wine World</h1>
+      </div>
+
+      <nav class="nav">
+        <a href="#coleccion">Colección</a>
+        <a href="#maridajes">Maridajes</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contacto" class="cta">Contáctanos</a>
+      </nav>
     </header>
 
-    <!-- CATÁLOGO -->
-    <section id="catalogo" class="catalogo">
-        <h2>Nuestra Colección</h2>
-        <p>Botellas cuidadosamente seleccionadas por sabor, región y equilibrio.</p>
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="eyebrow muted">Selección & Curaduría</div>
+          <h2 style="font-family:'Cormorant Garamond', serif;font-size:48px;margin:0 0 12px">Vinos minimalistas, experiencias memorables.</h2>
+          <p class="muted">Best Wine World reúne etiquetas seleccionadas...</p>
+        </div>
+
+        <aside class="hero-image">
+          <img class="bottle" src="assets/1ra%20botella%20vino.png" alt="Botella principal">
+        </aside>
+      </section>
+
+      <!-- COLECCIÓN -->
+      <section id="coleccion" class="section">
+        <h3 style="font-family:'Cormorant Garamond', serif;font-size:28px">Nuestra Colección</h3>
 
         <div class="grid">
 
-            <!-- 1: Reserva Selección -->
-            <article class="card">
-                <img src="assets/1ra botella vino.png" alt="Reserva Selección">
-                <h4>Reserva Selección</h4>
-                <p>Frutos rojos, taninos finos y final prolongado.</p>
-                <span class="precio">$— / botella</span>
-            </article>
+          <article class="card">
+            <img src="assets/Botella,%20barrica.png" alt="Botella barrica">
+            <h4>Reserva Barrica</h4>
+            <p class="muted">Aromas a frutos rojos, taninos refinados.</p>
+          </article>
 
-            <!-- 2: Edición Barrica -->
-            <article class="card">
-                <img src="assets/Botella, barrica.png" alt="Edición Barrica">
-                <h4>Edición Barrica</h4>
-                <p>Notas de madera suave y vainilla.</p>
-                <span class="precio">$— / botella</span>
-            </article>
+          <article class="card">
+            <img src="assets/Botella,%20ensalda.png" alt="Botella ensalada">
+            <h4>Edición Fresca</h4>
+            <p class="muted">Notas ligeras y perfectas para aperitivos.</p>
+          </article>
 
-            <!-- 3: Selección Premium -->
-            <article class="card">
-                <img src="assets/Botella, ensalda.png" alt="Selección Premium">
-                <h4>Selección Premium</h4>
-                <p>Elegante, balanceado y versátil.</p>
-                <span class="precio">$— / botella</span>
-            </article>
-
-            <!-- 4: Maridaje Especial -->
-            <article class="card">
-                <img src="assets/Botella, pescado y pasta.png" alt="Maridaje Especial">
-                <h4>Maridaje Especial</h4>
-                <p>Perfecto para pescados, pastas y platillos frescos.</p>
-                <span class="precio">$— / botella</span>
-            </article>
+          <article class="card">
+            <img src="assets/Botella,%20pescado%20y%20pasta.png" alt="Botella pescado y pasta">
+            <h4>Selección Premium</h4>
+            <p class="muted">Elegancia y equilibrio para cenas formales.</p>
+          </article>
 
         </div>
-    </section>
+      </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Best Wine World – Todos los derechos reservados.</p>
-    </footer>
+      <!-- MARIDAJES -->
+      <section id="maridajes" class="section">
+        <h3 style="font-family:'Cormorant Garamond', serif;font-size:28px">Maridajes</h3>
+
+        <div class="maridaje">
+          <div>
+            <ul class="muted">
+              <li><strong>Tinto</strong> — carnes rojas y quesos.</li>
+              <li><strong>Blanco</strong> — pastas y pescados.</li>
+            </ul>
+          </div>
+
+          <img src="assets/Botella,%20ensalda.png" alt="Maridaje imagen">
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="sobre" class="about section">
+        <img src="assets/Botella,%20pescado%20y%20pasta.png" alt="Bodega">
+        <div>
+          <h3 style="font-family:'Cormorant Garamond', serif;font-size:28px">Sobre Best Wine World</h3>
+          <p class="muted">Nuestra pasión es la curaduría...</p>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="section">
+        <h3 style="font-family:'Cormorant Garamond', serif;font-size:28px">Contacto</h3>
+      </section>
+
+    </main>
+
+  </div>
 
 </body>
 </html>
