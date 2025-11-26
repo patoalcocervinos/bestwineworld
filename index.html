@@ -1,0 +1,233 @@
+<!--
+Best Wine World - Single-file website (HTML + CSS + minimal JS)
+Style: Minimalista / Premium (Marfil + Carbón + Dorado mate)
+Fonts: Cormorant Garamond (titles), Montserrat (body)
+How to use:
+ - Replace placeholder images (assets/) with your photography.
+ - Replace contact mailto / WhatsApp link with your number.
+ - Add logo in the header (./assets/logo.svg or PNG).
+ - This is static; for a store integrate Shopify / WooCommerce or a simple buy button.
+-->
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Best Wine World — Vinos Premium</title>
+  <meta name="description" content="Best Wine World: selección de vinos premium, maridajes y experiencias para paladares exigentes.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #F8F4EC; /* Marfil */
+      --text: #0D0D0D; /* Negro Carbón */
+      --accent: #C7A77D; /* Dorado mate */
+      --muted:#6A6A6A;
+      --max-width:1100px;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max-width);margin:0 auto;padding:32px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:16px}
+    .brand h1{font-family:'Cormorant Garamond', serif;font-weight:700;margin:0;font-size:26px;letter-spacing:0.5px}
+    .nav{display:flex;gap:18px;align-items:center}
+    .nav a{font-weight:600;font-size:14px;color:var(--muted)}
+    .cta{background:var(--text);color:var(--bg);padding:10px 16px;border-radius:8px;font-weight:600;display:inline-block}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;padding:60px 0}
+    .hero .eyebrow{font-size:14px;color:var(--muted);letter-spacing:1px}
+    .hero h2{font-family:'Cormorant Garamond', serif;font-size:48px;margin:12px 0;color:var(--text);line-height:1}
+    .hero p{max-width:520px;color:var(--muted);font-size:16px}
+    .hero .hero-image{background:#111;padding:18px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+    .bottle{width:100%;height:auto;max-width:300px;display:block}
+
+    /* Collection */
+    .section{padding:48px 0}
+    .section h3{font-family:'Cormorant Garamond',serif;font-size:28px;margin:0 0 18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:transparent;border:1px solid rgba(13,13,13,0.06);padding:18px;border-radius:12px}
+    .card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+    .card h4{margin:12px 0 6px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .price{font-weight:600;margin-top:10px;color:var(--text)}
+
+    /* Maridajes */
+    .maridaje{display:flex;gap:20px;align-items:center}
+    .maridaje .left{flex:1}
+    .maridaje img{width:300px;border-radius:12px}
+
+    /* About */
+    .about{display:flex;gap:30px;align-items:center}
+    .about img{width:260px;border-radius:12px}
+
+    /* Contact */
+    .contact{background:linear-gradient(180deg, rgba(199,167,125,0.06), transparent);padding:28px;border-radius:12px}
+    .contact .actions{display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;font-weight:600}
+    .btn-ghost{border:1px solid rgba(13,13,13,0.08);background:transparent}
+    .btn-primary{background:var(--text);color:var(--bg)}
+
+    footer{padding:24px 0;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr 320px}
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:700px){
+      .hero{grid-template-columns:1fr;gap:24px;padding:24px 0}
+      .grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      .nav{display:none}
+    }
+
+    /* Small utilities */
+    .muted{color:var(--muted)}
+    .accent{color:var(--accent)}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <!-- Replace with your logo.png/svg -->
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='52' height='52'><rect width='52' height='52' fill='%23C7A77D' rx='8'/><text x='26' y='33' font-size='20' font-family='Cormorant Garamond' text-anchor='middle' fill='%230d0d0d'>B</text></svg>" alt="Best Wine World Logo" style="height:52px;border-radius:8px">
+        <h1>Best Wine World</h1>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#coleccion">Colección</a>
+        <a href="#maridajes">Maridajes</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contacto" class="cta">Contáctanos</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div>
+          <div class="eyebrow muted">Selección & Curaduría</div>
+          <h2>Vinos minimalistas, experiencias memorables.</h2>
+          <p>Best Wine World reúne etiquetas seleccionadas para paladares exigentes. Cada botella cuenta una historia, cada copa es un detalle. Descubre nuestra colección y encuentra el vino ideal para tu ocasión.</p>
+          <div style="margin-top:20px;display:flex;gap:12px">
+            <a class="btn btn-primary" href="#coleccion">Ver colección</a>
+            <a class="btn btn-ghost" href="#contacto">Solicitar recomendación</a>
+          </div>
+        </div>
+        <aside class="hero-image" aria-hidden="true">
+          <!-- Placeholder bottle image: replace with your product photo -->
+          <img class="bottle" src="https://images.unsplash.com/photo-1510627498534-cf7e9002facc?auto=format&fit=crop&w=800&q=60" alt="Botella de vino elegante">
+        </aside>
+      </section>
+
+      <section class="section" id="coleccion">
+        <h3>Nuestra Colección</h3>
+        <p class="muted">Etiquetas seleccionadas por sabor, equilibrio y carácter.</p>
+        <div class="grid" style="margin-top:20px">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1511381939415-c1a7a8e1a3a7?auto=format&fit=crop&w=800&q=60" alt="Vino 1">
+            <h4>Reserva Selección</h4>
+            <p class="muted">Aromas a frutos rojos, taninos refinados y final persistente.</p>
+            <div class="price">$-- / botella</div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1502741126161-b048400d6b66?auto=format&fit=crop&w=800&q=60" alt="Vino 2">
+            <h4>Edición Barrica</h4>
+            <p class="muted">Notas de vainilla y madera, cuerpo medio-alto.</p>
+            <div class="price">$-- / botella</div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=60" alt="Vino 3">
+            <h4>Selección Premium</h4>
+            <p class="muted">Equilibrio y elegancia, recomendado para cenas formales.</p>
+            <div class="price">$-- / botella</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="maridajes">
+        <h3>Maridajes</h3>
+        <div class="maridaje" style="margin-top:16px">
+          <div class="left">
+            <p class="muted">Consejos rápidos para combinar sabores con elegancia.</p>
+            <ul style="margin-top:12px;color:var(--muted)">
+              <li><strong>Tinto estructurado</strong> — carnes rojas y quesos intensos.</li>
+              <li><strong>Blanco aromático</strong> — pescados grasos y pastas ligeras.</li>
+              <li><strong>Rosado seco</strong> — ensaladas, aperitivos y momentos de día.</li>
+            </ul>
+          </div>
+          <img src="https://images.unsplash.com/photo-1516685304081-de7947d419d2?auto=format&fit=crop&w=800&q=60" alt="Maridaje imagen">
+        </div>
+      </section>
+
+      <section class="section about" id="sobre">
+        <img src="https://images.unsplash.com/photo-1529429618430-1b4ee4a6b8a0?auto=format&fit=crop&w=800&q=60" alt="Bodega">
+        <div>
+          <h3>Sobre Best Wine World</h3>
+          <p class="muted">Nuestra pasión es la curaduría. Seleccionamos etiquetas de regiones reconocidas y de pequeñas producciones que ofrecen carácter y consistencia. Buscamos vinos que cuenten historias y acompañen momentos memorables.</p>
+          <p style="margin-top:12px;color:var(--muted)">Ofrecemos asesoría personalizada y servicios para cenas, eventos privados y regalos corporativos. Contáctanos para una selección hecha a la medida.</p>
+        </div>
+      </section>
+
+      <section class="section" id="contacto">
+        <h3>Contacto & Recomendaciones</h3>
+        <div class="contact" style="margin-top:12px;display:flex;flex-direction:column;gap:14px">
+          <p class="muted">¿No sabes qué elegir? Cuéntanos la ocasión y te recomendamos la etiqueta perfecta.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="tel:+521000000000">Llamar</a>
+            <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=521000000000&text=Hola%20Best%20Wine%20World,%20quiero%20una%20recomendaci%C3%B3n">WhatsApp</a>
+            <a class="btn btn-ghost" href="mailto:contacto@bestwineworld.com?subject=Recomendaci%C3%B3n%20de%20vinos">Enviar correo</a>
+          </div>
+          <form action="mailto:contacto@bestwineworld.com" method="post" enctype="text/plain" style="margin-top:8px;display:flex;flex-direction:column;gap:8px;max-width:500px">
+            <input name="Nombre" placeholder="Nombre" style="padding:10px;border-radius:8px;border:1px solid rgba(13,13,13,0.06)">
+            <input name="Email" placeholder="Correo" style="padding:10px;border-radius:8px;border:1px solid rgba(13,13,13,0.06)">
+            <textarea name="Mensaje" placeholder="Dime la ocasión, comida y presupuesto" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(13,13,13,0.06)"></textarea>
+            <button type="submit" class="btn btn-primary" style="width:180px">Enviar</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="muted">&copy; <strong>Best Wine World</strong> — Todas las marcas mencionadas son propiedad de sus respectivos dueños.</div>
+        <div class="muted">Diseño minimalista · Contacto: contacto@bestwineworld.com</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        const href = this.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    })
+  </script>
+</body>
+</html>
