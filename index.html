@@ -1,164 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Best Wine World — Vinos Premium</title>
-
-  <meta name="description" content="Best Wine World: vinos premium seleccionados para paladares exigentes. Compra, maridajes, asesoría y recomendaciones personalizadas.">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Wine World</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-<div class="container">
 
-  <!-- HEADER -->
-  <header>
-    <div class="brand">
-      <img src="assets/logo.svg"
-           alt="Best Wine World Logo"
-           style="height:52px;border-radius:8px">
-      <h1>Best Wine World</h1>
-    </div>
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Best Wine World</h1>
+            <p>Los mejores vinos seleccionados especialmente para ti.</p>
+            <a href="#catalogo" class="btn">Ver Catálogo</a>
+        </div>
+    </header>
 
-    <nav class="nav">
-      <a href="#coleccion">Colección</a>
-      <a href="#maridajes">Maridajes</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contacto" class="cta">Contacto</a>
-    </nav>
-  </header>
+    <!-- CATÁLOGO -->
+    <section id="catalogo" class="catalogo">
+        <h2>Nuestra Colección</h2>
+        <p>Botellas cuidadosamente seleccionadas por sabor, región y equilibrio.</p>
 
+        <div class="grid">
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div>
-      <div class="eyebrow muted">Selección Especial</div>
-      <h2>Vinos excelentes, experiencias memorables.</h2>
-      <p>Una colección diseñada para quienes buscan calidad, carácter y elegancia en cada botella. Encuentra tu vino ideal para cada ocasión.</p>
+            <!-- 1: Reserva Selección -->
+            <article class="card">
+                <img src="assets/1ra botella vino.png" alt="Reserva Selección">
+                <h4>Reserva Selección</h4>
+                <p>Frutos rojos, taninos finos y final prolongado.</p>
+                <span class="precio">$— / botella</span>
+            </article>
 
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#coleccion">Ver colección</a>
-        <a class="btn btn-ghost" href="#contacto">Asesoría personalizada</a>
-      </div>
-    </div>
+            <!-- 2: Edición Barrica -->
+            <article class="card">
+                <img src="assets/Botella, barrica.png" alt="Edición Barrica">
+                <h4>Edición Barrica</h4>
+                <p>Notas de madera suave y vainilla.</p>
+                <span class="precio">$— / botella</span>
+            </article>
 
-    <aside class="hero-image">
-      <<img src="Botella, barrica.png" alt="Selección Premium">
-  <h4>Selección Premium</h4>>
-    </aside>
-  </section>
+            <!-- 3: Selección Premium -->
+            <article class="card">
+                <img src="assets/Botella, ensalda.png" alt="Selección Premium">
+                <h4>Selección Premium</h4>
+                <p>Elegante, balanceado y versátil.</p>
+                <span class="precio">$— / botella</span>
+            </article>
 
+            <!-- 4: Maridaje Especial -->
+            <article class="card">
+                <img src="assets/Botella, pescado y pasta.png" alt="Maridaje Especial">
+                <h4>Maridaje Especial</h4>
+                <p>Perfecto para pescados, pastas y platillos frescos.</p>
+                <span class="precio">$— / botella</span>
+            </article>
 
-  <!-- COLECCIÓN -->
-  <section class="section" id="coleccion">
-    <h3>Nuestra Colección</h3>
-    <p class="muted">Botellas cuidadosamente seleccionadas por sabor, región y equilibrio.</p>
+        </div>
+    </section>
 
-    <div class="grid">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1511381939415-c1a7a8e1a3a7?auto=format&fit=crop&w=800&q=60" alt="">
-        <h4>Reserva Selección</h4>
-        <p class="muted">Frutos rojos, taninos finos, final prolongado.</p>
-        <div class="price">$— / botella</div>
-      </article>
-
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1502741126161-b048400d6b66?auto=format&fit=crop&w=800&q=60" alt="">
-        <h4>Edición Barrica</h4>
-        <p class="muted">Notas de madera suave y vainilla.</p>
-        <div class="price">$— / botella</div>
-      </article>
-
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=60" alt="">
-        <h4>Selección Premium</h4>
-        <p class="muted">Elegante, balanceado y versátil.</p>
-        <div class="price">$— / botella</div>
-      </article>
-    </div>
-  </section>
-
-
-  <!-- MARIDAJES -->
-  <section class="section" id="maridajes">
-    <h3>Maridajes</h3>
-
-    <div class="maridaje">
-      <div class="left">
-        <p class="muted">Combinaciones simples para mejorar cada experiencia.</p>
-        <ul class="muted">
-          <li><strong>Tinto estructurado</strong> — carnes rojas, quesos intensos.</li>
-          <li><strong>Blanco aromático</strong> — pescados grasos, pasta ligera.</li>
-          <li><strong>Rosado seco</strong> — ensaladas, aperitivos.</li>
-        </ul>
-      </div>
-
-      <img src="https://images.unsplash.com/photo-1516685304081-de7947d419d2?auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-  </section>
-
-
-  <!-- SOBRE -->
-  <section class="section about" id="sobre">
-    <img src="https://images.unsplash.com/photo-1529429618430-1b4ee4a6b8a0?auto=format&fit=crop&w=800&q=60" alt="">
-    <div>
-      <h3>Sobre Best Wine World</h3>
-      <p class="muted">Nos especializamos en seleccionar vinos que destacan por su carácter, elegancia y autenticidad. Nuestro objetivo es ayudarte a encontrar la botella perfecta para tu ocasión.</p>
-      <p class="muted" style="margin-top:12px">Ofrecemos recomendaciones personalizadas, selección para eventos y opciones premium para regalos corporativos.</p>
-    </div>
-  </section>
-
-
-  <!-- CONTACTO -->
-  <section class="section" id="contacto">
-    <h3>Contacto</h3>
-
-    <div class="contact">
-      <p class="muted">Cuéntanos tu ocasión y te recomendaremos la etiqueta ideal.</p>
-
-      <div class="actions">
-        <a class="btn btn-primary" href="tel:+521000000000">Llamar</a>
-        <a class="btn btn-primary"
-           href="https://api.whatsapp.com/send?phone=521000000000&text=Hola,%20quiero%20una%20recomendación">WhatsApp</a>
-        <a class="btn btn-ghost"
-           href="mailto:contacto@bestwineworld.com">Enviar correo</a>
-      </div>
-
-      <form action="mailto:contacto@bestwineworld.com" method="post" enctype="text/plain">
-        <input name="Nombre" placeholder="Nombre">
-        <input name="Email" placeholder="Correo">
-        <textarea name="Mensaje" placeholder="Describe la ocasión y presupuesto" rows="4"></textarea>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
-    </div>
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="muted">&copy; Best Wine World — Todos los derechos reservados.</div>
-  </footer>
-
-</div>
-
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click',e=>{
-      const href = a.getAttribute('href');
-      if(href.length>1){
-        e.preventDefault();
-        document.querySelector(href).scrollIntoView({behavior:'smooth'});
-      }
-    });
-  });
-</script>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Best Wine World – Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
