@@ -1,0 +1,54 @@
+/* Estilos principales para una apariencia más elegante */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #f7f7f9; /* Fondo elegante, claro y moderno */
+  color: #333;
+}
+
+header {
+  background: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #222;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Quitar imagen de fondo si existiera */
+.background-image, .bg-image, .hero-image {
+  background: none !important;
+}
+
+/* Botones elegantes */
+button {
+  background: #333;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #555;
+}
